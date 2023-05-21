@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<form onsubmit="return myfunc()"> 
+ Username:<input type="text" id="username" value=""><br>
+ Password:<input type="password" id="password" value=""><br>
+ Confirm Password:<input type="password" id="passwords" value=""><br>
+ <input type="checkbox" value="Show me" id="show">
+ <label for="checkbox">Show me</label>
+
+ <input type="submit" value="Submit">
+
+  </form>
+
+  <script>
+    function myfunc(){
+        let a=document.getElementById('username').value;
+        let b=document.getElementById('password').value;
+        let c=document.getElementById('passwords').value;
+        let show=document.getElementById('show').value;
+        
+
+
+        if(a == ""){
+            alert(" ***Username should not be empty");
+            return false;
+        }
+        if(b == ""){
+            alert(" ***Password should not be empty");
+            return false;
+        }
+        if(b.length <5){
+            alert('password should be 5 character');
+            return false;
+        }
+        if(b !==c){
+            alert('password does not matched');
+            return false;
+
+        }
+    }
+  </script>
+</body>
+</html>
